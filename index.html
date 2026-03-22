@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Crimson Development IO" >
+  <meta name="description" content="A website presentation to make user understand how a compter works form entering an input and displaying an output">
+  <meta name="keywords" content="HTML, computer, machine, How it works?, CSS, JavaScript, JS, Presentation, binary, ASCII, undrstanding, How it, electronic.">
+  <title>How it Works</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+  <header>
+    <div class="grid-bg"></div>
+    <div class="chip-art">
+      ┌─────────────────────────────────────────────┐<br>
+      │  CPU  ████  ALU  ████  REGISTERS  ████  I/O │<br>
+      │  ████████████████████████████████████████  │<br>
+      │  RAM ░░░░░░░░░░░░ CLOCK ▓▓▓▓ CACHE L1/L2  │<br>
+      └─────────────────────────────────────────────┘
+    </div>
+    <h1>How Computers<br><em>Actually</em> Work</h1>
+    <p class="subtitle">From sand to silicon &nbsp;·&nbsp; from voltage to thought</p>
+    <nav class="toc">
+    <a href="#s1">Origins</a>
+    <a href="#s2">What is a Computer?</a>
+    <a href="#s3">Binary & Logic</a>
+    <a href="#s4">Transistors</a>
+    <a href="#s5">Logic Gates</a>
+    <a href="#s6">CPU Deep Dive</a>
+    <a href="#s7">Memory</a>
+    <a href="#s8">Storage</a>
+    <a href="#s9">Operating System</a>
+    <a href="#s10">Software Stack</a>
+    <a href="#s11">Networking</a>
+    <a href="#s12">The Full Picture</a>
+    </nav>
+  </header>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 1: ORIGINS -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s1">
+    <div class="section-num">01 / 12</div>
+    <h2>The <span>Long Road</span> Here</h2>
+    <p class="lead">
+      Computation didn't begin with electricity. It began with the need to count.
+    </p>
+
+    <p>
+      The word <em>computer</em> originally referred to a <mark>human being</mark> — a person whose job was to perform calculations. Armies of human computers computed artillery tables. Banks employed them to calculate interest. The machine we now call a computer was built to replace that person.
+    </p>
+
+    <div class="timeline">
+    <div class="timeline-item">
+    <div class="timeline-year">~3000 BC</div>
+    <div class="timeline-title">The Abacus</div>
+    <div class="timeline-body">The first mechanical aid to calculation. Physical beads represent numbers. Humans still do the logic; the tool just stores intermediate state.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1642</div>
+    <div class="timeline-title">Pascal's Pascaline</div>
+    <div class="timeline-body">Blaise Pascal built the first mechanical calculator using gears. Turning a wheel carried values from one digit to the next — mechanical addition.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1837</div>
+    <div class="timeline-title">Babbage's Analytical Engine</div>
+    <div class="timeline-body">Charles Babbage designed — but never fully built — a steam-powered machine with an input (punch cards), a mill (the CPU), a store (memory), and output. The entire architecture of modern computers, 100 years early.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1843</div>
+    <div class="timeline-title">Ada Lovelace — First Algorithm</div>
+    <div class="timeline-body">Ada Lovelace wrote the first published algorithm intended for a machine. She understood that the Analytical Engine could manipulate symbols — not just numbers — making her arguably the first to conceive of software.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1936</div>
+    <div class="timeline-title">Alan Turing — The Universal Machine</div>
+    <div class="timeline-body">Turing published his paper on "computable numbers," describing a theoretical machine that could simulate any other machine by reading and writing symbols on a tape. This "Turing machine" is the conceptual blueprint for every computer ever built.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1945</div>
+    <div class="timeline-title">ENIAC — First Electronic Computer</div>
+    <div class="timeline-body">30 tons. 18,000 vacuum tubes. 150kW of power. ENIAC could do 5,000 additions per second. Programmed by physically rewiring cables — no software, just hardware configuration.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1947</div>
+    <div class="timeline-title">The Transistor</div>
+    <div class="timeline-body">Bell Labs invented the transistor — replacing hot, fragile, power-hungry vacuum tubes with a tiny solid-state switch. This is the moment everything changed.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1958</div>
+    <div class="timeline-title">Integrated Circuit</div>
+    <div class="timeline-body">Jack Kilby at Texas Instruments placed multiple transistors on a single piece of silicon. A chip was born. The path to billions of transistors on a fingernail was opened.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">1971</div>
+    <div class="timeline-title">Intel 4004 — First Microprocessor</div>
+    <div class="timeline-body">An entire CPU on a single chip. 2,300 transistors. The computer shrinks from a room to a rectangle smaller than your thumbnail.</div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-year">Today</div>
+    <div class="timeline-title">Apple M-series / AMD Ryzen / etc.</div>
+    <div class="timeline-body">
+      Over 100 billion transistors on a chip the size of a postage stamp. Each transistor is ~3 nanometers — roughly 20 silicon atoms wide.
+    </div>
+    </div>
+    </div>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 2: WHAT IS A COMPUTER? -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s2">
+  <div class="section-num">02 / 12</div>
+  <h2>What <span>Is</span> a Computer?</h2>
+  <p class="lead">Strip away every abstraction. What remains?</p>
+
+  <p>A computer is a machine that reads instructions stored in memory, executes those instructions to transform data, and writes results back to memory. That's the complete definition. Everything else — your browser, your photos, your music — is an elaborate stack of abstractions built on top of that single loop.</p>
+
+  <div class="callout cyan">
+  <div class="callout-label">The Von Neumann Architecture (1945)</div>
+  <p>John von Neumann described the architecture used by virtually every computer today: a CPU, memory, and I/O devices connected by a bus. The key insight was that <mark>programs and data live in the same memory</mark> — code is just data that happens to be instructions. This "stored-program" concept is what lets you run any program without rewiring anything.</p>
+  </div>
+
+  <div class="diagram">
+  <pre>
+  ┌──────────────────────────────────────────────────────┐
+  │                  Von Neumann Machine                  │
+  │                                                      │
+  │  ┌────────────────────┐     ┌──────────────────────┐ │
+  │  │        CPU         │◄────►│       MEMORY         │ │
+  │  │  ┌─────────────┐  │     │  Instructions (code)  │ │
+  │  │  │     ALU     │  │     │  Data (variables)     │ │
+  │  │  │ (arithmetic)│  │     │  Stack & Heap         │ │
+  │  │  └─────────────┘  │     └──────────────────────┘ │
+  │  │  ┌─────────────┐  │              │               │
+  │  │  │  Registers  │  │              │               │
+  │  │  │  (scratch   │  │     ┌────────▼─────────────┐ │
+  │  │  │   pad)      │  │     │     I/O Devices       │ │
+  │  │  └─────────────┘  │     │  Keyboard, Screen,    │ │
+  │  │  ┌─────────────┐  │     │  Disk, Network, etc.  │ │
+  │  │  │   Control   │  │     └──────────────────────┘ │
+  │  │  │    Unit     │  │                              │
+  │  │  └─────────────┘  │                              │
+  │  └────────────────────┘                              │
+  └──────────────────────────────────────────────────────┘
+  </pre>
+  </div>
+
+  <p>Every action your computer takes — playing a video, running a game, displaying this page — reduces to millions of tiny steps through this loop: <mark>Fetch an instruction → Decode it → Execute it → Store the result → Repeat.</mark></p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 3: BINARY -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s3">
+  <div class="section-num">03 / 12</div>
+  <h2>Binary: <span>The Language of Voltage</span></h2>
+  <p class="lead">Why do computers speak in 1s and 0s? Because voltage is either high or low.</p>
+
+  <p>Deep inside a chip, logic is implemented as electrical voltage levels. A transistor is either conducting (~1.8V, call it <mark>1</mark>) or not conducting (~0V, call it <mark>0</mark>). There is no third option in digital logic. This maps perfectly to binary — base-2 arithmetic.</p>
+
+  <p>Everything a computer processes — text, images, music, video, programs — is ultimately encoded as sequences of bits (binary digits). A <mark>bit</mark> is a single 0 or 1. Eight bits make a <mark>byte</mark>. Your 1TB hard drive holds ~8 trillion individual bits.</p>
+
+  <h3>Try it — Click the bits to toggle them</h3>
+  <div class="binary-demo">
+  <div class="bit-row" id="bit-row">
+  <div class="bit on" onclick="toggleBit(this)">1</div>
+  <div class="bit off" onclick="toggleBit(this)">0</div>
+  <div class="bit off" onclick="toggleBit(this)">0</div>
+  <div class="bit on" onclick="toggleBit(this)">1</div>
+  <div class="bit off" onclick="toggleBit(this)">0</div>
+  <div class="bit on" onclick="toggleBit(this)">1</div>
+  <div class="bit off" onclick="toggleBit(this)">0</div>
+  <div class="bit on" onclick="toggleBit(this)">1</div>
+  </div>
+  <div class="bit-result" id="binary-output">
+  Decimal: <span id="dec-val">149</span> &nbsp;|&nbsp;
+  Hex: <span id="hex-val">0x95</span> &nbsp;|&nbsp;
+  ASCII: <span id="char-val">not printable</span>
+  </div>
+  </div>
+
+  <p>When you type the letter "A", the keyboard sends the binary number <code>01000001</code> (decimal 65) to the computer. The computer stores it in memory as that pattern of 8 voltage levels — high-low-low-low-low-low-high — and later your screen interprets those same bits to know to light up the pixels that form the shape of "A".</p>
+
+  <div class="callout green">
+  <div class="callout-label">Why not use base-10?</div>
+  <p>Theoretically you could build a decimal computer — some early machines were decimal. But reliably distinguishing 10 distinct voltage levels (0.0V, 0.2V, 0.4V... 1.8V) in a real circuit subject to noise, temperature drift, and manufacturing variation is extraordinarily difficult. Two levels (high/low) is robust and simple. Binary wins by physics.</p>
+  </div>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 4: TRANSISTORS -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s4">
+  <div class="section-num">04 / 12</div>
+  <h2>The <span>Transistor</span></h2>
+  <p class="lead">The most important invention in human history. A switch too small to see.</p>
+
+  <p>A transistor is a three-terminal semiconductor device. Think of it as an electrically controlled switch. Apply voltage to the <mark>Gate</mark> terminal, and current flows between <mark>Source</mark> and <mark>Drain</mark>. Remove the gate voltage, and current stops. On and off. 1 and 0.</p>
+
+  <div class="diagram">
+  <pre>
+  MOSFET (Metal-Oxide-Semiconductor Field-Effect Transistor)
+  — the type used in modern CPUs —
+
+  Gate (control voltage)
+  │
+  ────┼────
+  Source  │ │  Drain
+  ───────[   ]───────
+  Substrate
+  │
+  GND
+
+  Gate voltage LOW  →  No current flows  →  OFF (0)
+  Gate voltage HIGH →  Current flows     →  ON  (1)
+  </pre>
+  </div>
+
+  <p>Modern CPUs use a variant called <mark>FinFET</mark> (a 3D transistor that wraps the channel on three sides), now evolving to <mark>Gate-All-Around (GAA)</mark> where the gate wraps entirely around the channel. This allows transistors to shrink to 3nm and below.</p>
+
+  <div class="callout">
+  <div class="callout-label">Scale Check</div>
+  <p>A human hair is ~70,000 nanometers wide. A modern transistor is 3nm. You could fit roughly 23,000 transistors across a single human hair. The M3 Ultra chip contains about 153 billion transistors on a chip you can hold between two fingers.</p>
+  </div>
+
+  <h3>Moore's Law</h3>
+  <p>In 1965, Gordon Moore observed that the number of transistors on a chip doubled approximately every two years. This "law" held remarkably well for 50 years, driving an exponential increase in computing power at decreasing cost. It is now slowing — we are approaching physical limits (a few atoms wide) — which is why chip designers are turning to 3D stacking, chiplets, and specialized accelerators (GPUs, NPUs) instead of just shrinking transistors further.</p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 5: LOGIC GATES -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s5">
+  <div class="section-num">05 / 12</div>
+  <h2><span>Logic Gates</span> — Thinking in Silicon</h2>
+  <p class="lead">Connect two transistors and you get a thought. Seriously.</p>
+
+  <p>Transistors alone are just switches. But connect them in specific configurations and they implement <mark>Boolean logic</mark> — the mathematics of true/false reasoning. These configurations are called <mark>logic gates</mark>.</p>
+
+  <div class="gates-grid">
+  <div class="gate-card">
+  <div class="gate-name">AND</div>
+  <table class="truth-table">
+  <tr><th>A</th><th>B</th><th>OUT</th></tr>
+  <tr><td class="zero">0</td><td class="zero">0</td><td class="zero">0</td></tr>
+  <tr><td class="zero">0</td><td class="one">1</td><td class="zero">0</td></tr>
+  <tr><td class="one">1</td><td class="zero">0</td><td class="zero">0</td></tr>
+  <tr><td class="one">1</td><td class="one">1</td><td class="one">1</td></tr>
+  </table>
+  <p style="font-size:0.68rem;color:var(--text-dim);margin-top:0.7rem;margin-bottom:0">Both inputs must be 1</p>
+  </div>
+  <div class="gate-card">
+  <div class="gate-name">OR</div>
+  <table class="truth-table">
+  <tr><th>A</th><th>B</th><th>OUT</th></tr>
+  <tr><td class="zero">0</td><td class="zero">0</td><td class="zero">0</td></tr>
+  <tr><td class="zero">0</td><td class="one">1</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="zero">0</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="one">1</td><td class="one">1</td></tr>
+  </table>
+  <p style="font-size:0.68rem;color:var(--text-dim);margin-top:0.7rem;margin-bottom:0">At least one input is 1</p>
+  </div>
+  <div class="gate-card">
+  <div class="gate-name">NOT</div>
+  <table class="truth-table">
+  <tr><th>A</th><th>OUT</th></tr>
+  <tr><td class="zero">0</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="zero">0</td></tr>
+  </table>
+  <p style="font-size:0.68rem;color:var(--text-dim);margin-top:0.7rem;margin-bottom:0">Inverts the input</p>
+  </div>
+  <div class="gate-card">
+  <div class="gate-name">XOR</div>
+  <table class="truth-table">
+  <tr><th>A</th><th>B</th><th>OUT</th></tr>
+  <tr><td class="zero">0</td><td class="zero">0</td><td class="zero">0</td></tr>
+  <tr><td class="zero">0</td><td class="one">1</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="zero">0</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="one">1</td><td class="zero">0</td></tr>
+  </table>
+  <p style="font-size:0.68rem;color:var(--text-dim);margin-top:0.7rem;margin-bottom:0">Inputs differ = 1</p>
+  </div>
+  <div class="gate-card">
+  <div class="gate-name">NAND</div>
+  <table class="truth-table">
+  <tr><th>A</th><th>B</th><th>OUT</th></tr>
+  <tr><td class="zero">0</td><td class="zero">0</td><td class="one">1</td></tr>
+  <tr><td class="zero">0</td><td class="one">1</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="zero">0</td><td class="one">1</td></tr>
+  <tr><td class="one">1</td><td class="one">1</td><td class="zero">0</td></tr>
+  </table>
+  <p style="font-size:0.68rem;color:var(--text-dim);margin-top:0.7rem;margin-bottom:0">Universal gate — can build everything</p>
+  </div>
+  </div>
+
+  <div class="callout purple">
+  <div class="callout-label">The Half Adder — Where Math Emerges from Logic</div>
+  <p>Connect an XOR gate and an AND gate to the same two inputs. The XOR gives you the <mark>sum bit</mark>, the AND gives you the <mark>carry bit</mark>. You have just built a circuit that can add two single-bit numbers. Chain 64 of these together and you can add two 64-bit integers — the basic arithmetic your CPU does billions of times per second. <em>All math emerges from gates. All gates emerge from transistors. All transistors emerge from voltage levels. Voltage levels are physics.</em></p>
+  </div>
+
+  <p>The NAND gate is special: it is <mark>functionally complete</mark>, meaning any possible logic function can be built from NAND gates alone. AND, OR, NOT, XOR, adders, multiplexers, flip-flops — all from one type of gate made from two transistors.</p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 6: CPU -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s6">
+  <div class="section-num">06 / 12</div>
+  <h2>The <span>CPU</span> — Mind of the Machine</h2>
+  <p class="lead">A CPU is a loop that runs three to five billion times per second.</p>
+
+  <p>The Central Processing Unit is an enormously complex collection of logic gates organized to execute instructions. At its heart is the <mark>Fetch → Decode → Execute</mark> cycle, repeated billions of times each second at the pace dictated by the <mark>clock signal</mark> — a crystal oscillator that ticks like a metronome.</p>
+
+  <h3>The Fetch–Decode–Execute Cycle</h3>
+  <div class="pipeline">
+  <div class="pipe-stage">
+  <span class="pipe-icon">📥</span>
+  <span class="pipe-label">Fetch</span>
+  <div class="pipe-desc">Read next instruction from memory using the Program Counter register</div>
+  </div>
+  <div class="pipe-stage">
+  <span class="pipe-icon">🔍</span>
+  <span class="pipe-label">Decode</span>
+  <div class="pipe-desc">Interpret the binary instruction — what operation? which registers?</div>
+  </div>
+  <div class="pipe-stage">
+  <span class="pipe-icon">⚙️</span>
+  <span class="pipe-label">Execute</span>
+  <div class="pipe-desc">ALU performs the operation (add, compare, shift, etc.)</div>
+  </div>
+  <div class="pipe-stage">
+  <span class="pipe-icon">💾</span>
+  <span class="pipe-label">Memory</span>
+  <div class="pipe-desc">Read from or write to RAM if needed</div>
+  </div>
+  <div class="pipe-stage">
+  <span class="pipe-icon">✍️</span>
+  <span class="pipe-label">Write Back</span>
+  <div class="pipe-desc">Store result into a register, advance Program Counter</div>
+  </div>
+  </div>
+
+  <h3>Key Components Inside a CPU</h3>
+
+  <p><strong style="color:var(--amber)">ALU (Arithmetic Logic Unit):</strong> Performs addition, subtraction, bitwise AND/OR/NOT/XOR, shifts, and comparisons. It is an array of adders and logic gates. No magic — just gates.</p>
+
+  <p><strong style="color:var(--amber)">Registers:</strong> Tiny, ultra-fast storage directly on the CPU die. A modern 64-bit CPU has ~32 general-purpose registers (e.g., <code>RAX</code>, <code>RBX</code> in x86). Operations happen in registers. Reading from RAM is far too slow — you must load values into registers first.</p>
+
+  <p><strong style="color:var(--amber)">Control Unit:</strong> The orchestrator. Reads the instruction, activates the right parts of the ALU, manages register reads/writes, controls the data bus. It's essentially a state machine.</p>
+
+  <p><strong style="color:var(--amber)">Program Counter (PC):</strong> A register that holds the memory address of the next instruction to execute. The CPU blindly follows this pointer through memory, executing whatever it finds there. A program is just a sequence of instructions laid out in memory, and the PC marches through them in order (unless a jump or branch instruction redirects it).</p>
+
+  <p><strong style="color:var(--amber)">Clock:</strong> A quartz crystal vibrates at a precise frequency — say, 4 GHz = 4 billion vibrations per second. Every cycle, logic gates settle to their new values. The clock keeps everything synchronized. Higher clock = faster, but also more heat (power = capacitance × voltage² × frequency).</p>
+
+  <h3>Modern CPU Tricks — Why Your CPU is Scary Fast</h3>
+
+  <div class="callout cyan">
+  <div class="callout-label">Pipelining</div>
+  <p>Instead of completing one instruction before starting the next, a pipelined CPU works on multiple instructions simultaneously — like an assembly line. While stage 4 (memory access) processes instruction N, stage 3 (execute) is already working on instruction N+1, stage 2 (decode) on N+2, and so on. Modern CPUs have pipelines 14–20 stages deep.</p>
+  </div>
+
+  <div class="callout purple">
+  <div class="callout-label">Out-of-Order Execution</div>
+  <p>The CPU doesn't necessarily execute instructions in the order you wrote them. If instruction 5 is waiting for memory (slow) but instruction 6 can already execute (its inputs are ready), the CPU executes 6 first. It reorders execution for maximum throughput, then presents results in the correct order. This is happening right now inside your CPU, thousands of times per second.</p>
+  </div>
+
+  <div class="callout green">
+  <div class="callout-label">Branch Prediction</div>
+  <p>Your code is full of if-statements. When the CPU hits a branch, it doesn't know yet which path to take — it hasn't computed the condition yet. Rather than stall, it <mark>guesses</mark> based on history. If its prediction was wrong, it discards the speculative work. Modern branch predictors are right ~95–98% of the time. (This is also the basis of the Spectre CPU vulnerability — speculative execution that leaks secrets.)</p>
+  </div>
+
+  <div class="callout">
+  <div class="callout-label">Superscalar Execution</div>
+  <p>Modern CPUs have multiple ALUs and can execute several instructions literally simultaneously within a single clock cycle. A modern core might retire 4–6 instructions per clock. Multiply by 3GHz and 8 cores and you're at hundreds of billions of operations per second.</p>
+  </div>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 7: MEMORY -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s7">
+  <div class="section-num">07 / 12</div>
+  <h2>Memory — <span>Where Everything Lives</span></h2>
+  <p class="lead">Memory is a hierarchy. Speed costs. The closer to the CPU, the faster — and smaller.</p>
+
+  <p>The CPU is extraordinarily fast. RAM is comparatively very slow (~100ns latency vs <1ns for registers). This speed mismatch is the central challenge of computer architecture. The solution: a <mark>memory hierarchy</mark> where fast/small/expensive caches sit between the CPU and slow/large/cheap main memory.</p>
+
+  <div class="memory-pyramid">
+  <div class="mem-layer">
+  <div class="mem-name">Registers</div>
+  <div class="mem-stats">~32 × 8 bytes &nbsp;·&nbsp; &lt;0.3ns &nbsp;·&nbsp; on CPU die</div>
+  </div>
+  <div class="mem-layer">
+  <div class="mem-name">L1 Cache</div>
+  <div class="mem-stats">32–128 KB per core &nbsp;·&nbsp; ~1–4 cycles &nbsp;·&nbsp; on CPU die</div>
+  </div>
+  <div class="mem-layer">
+  <div class="mem-name">L2 Cache</div>
+  <div class="mem-stats">256 KB–4 MB per core &nbsp;·&nbsp; ~10–20 cycles &nbsp;·&nbsp; on CPU die</div>
+  </div>
+  <div class="mem-layer">
+  <div class="mem-name">L3 Cache (shared)</div>
+  <div class="mem-stats">8–64 MB &nbsp;·&nbsp; ~40–60 cycles &nbsp;·&nbsp; on CPU die</div>
+  </div>
+  <div class="mem-layer">
+  <div class="mem-name">RAM (Main Memory)</div>
+  <div class="mem-stats">8 GB – 192 GB &nbsp;·&nbsp; ~100ns / 300–500 cycles &nbsp;·&nbsp; separate chip</div>
+  </div>
+  </div>
+
+  <p>When the CPU needs data, it first checks L1. If not there (<mark>cache miss</mark>), it checks L2, then L3, then RAM. A cache miss to RAM takes ~300 CPU cycles — in that time, the CPU could have executed hundreds of instructions. The entire field of "cache-friendly programming" is about arranging data so the CPU finds it in cache as often as possible.</p>
+
+  <h3>How RAM Physically Works</h3>
+  <p>Dynamic RAM (DRAM) stores each bit as charge in a tiny capacitor. Charged = 1, discharged = 0. Because capacitors leak, DRAM must be <mark>refreshed</mark> every ~64 milliseconds — the memory controller continuously re-reads and re-writes every bit in RAM just to maintain it. Your RAM is continuously rewriting itself thousands of times while you read this.</p>
+
+  <h3>The Stack and the Heap</h3>
+  <p>RAM is logically divided. The <mark>stack</mark> is a fast, automatically managed region used for function calls — local variables, return addresses. It grows and shrinks as functions call each other. The <mark>heap</mark> is a larger region used for dynamic allocation (<code>malloc</code> / <code>new</code>) — anything that needs to persist beyond a single function or whose size isn't known at compile time. Memory leaks happen when heap allocations are never freed.</p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 8: STORAGE -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s8">
+  <div class="section-num">08 / 12</div>
+  <h2>Storage — <span>Permanent Memory</span></h2>
+  <p class="lead">RAM forgets everything when the power goes off. Storage doesn't.</p>
+
+  <p>There are two kinds of memory: <mark>volatile</mark> (loses data without power — RAM) and <mark>non-volatile</mark> (persists — storage). When you save a file, data moves from RAM to storage. When you open a file, it moves back.</p>
+
+  <p><strong style="color:var(--amber)">Hard Disk Drive (HDD):</strong> Magnetic platters spin at 5,400–7,200 RPM. A read/write head moves across the platter surface, magnetizing tiny domains (north = 1, south = 0). Accessing data requires physically moving the head — mechanical latency of ~8ms. Fast for sequential reads; slow for random access.</p>
+
+  <p><strong style="color:var(--amber)">Solid State Drive (SSD):</strong> No moving parts. Data is stored in NAND flash cells — transistors with a floating gate that trap electrons. Trapped electrons = 1, empty = 0. No mechanical seeking. Random read latency drops to ~50–100μs — 100× faster than HDD. Modern NVMe SSDs can read at 7 GB/s.</p>
+
+  <p><strong style="color:var(--amber)">File Systems:</strong> Raw storage is just a sequence of blocks. The <mark>file system</mark> (NTFS, ext4, APFS, etc.) is a data structure — a tree of directories and files — that maps human-readable paths to physical block locations. When you delete a file, the OS often just removes the directory entry and marks those blocks as reusable; the actual data may persist until overwritten (the basis of data recovery).</p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 9: OPERATING SYSTEM -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s9">
+  <div class="section-num">09 / 12</div>
+  <h2>The <span>Operating System</span></h2>
+  <p class="lead">The invisible manager. You never see it, but it controls everything.</p>
+
+  <p>Without an OS, every program would need to know exactly how to talk to every piece of hardware. The OS solves this by being the sole mediator between programs and hardware. It provides abstractions: instead of writing to specific memory addresses on a graphics card, your program calls <code>draw()</code> and the OS handles the rest.</p>
+
+  <div class="os-stack">
+  <div class="os-layer">
+  <span>Applications &nbsp;(Chrome, Photoshop, your code)</span>
+  <span class="os-tag">User Space</span>
+  </div>
+  <div class="os-layer">
+  <span>System Libraries &nbsp;(libc, Win32 API, Cocoa)</span>
+  <span class="os-tag">Abstraction</span>
+  </div>
+  <div class="os-layer">
+  <span>System Calls &nbsp;(read, write, open, fork, mmap)</span>
+  <span class="os-tag">Kernel Interface</span>
+  </div>
+  <div class="os-layer">
+  <span>OS Kernel &nbsp;(process mgmt, memory mgmt, scheduling, drivers)</span>
+  <span class="os-tag">Kernel Space</span>
+  </div>
+  <div class="os-layer">
+  <span>Hardware &nbsp;(CPU, RAM, Disk, Network, GPU)</span>
+  <span class="os-tag">Physical Layer</span>
+  </div>
+  </div>
+
+  <h3>What the Kernel Actually Does</h3>
+
+  <p><strong style="color:var(--amber)">Process Management:</strong> Your CPU has N cores. You have hundreds of running programs. The OS scheduler rapidly switches each core between programs — so fast that every program feels like it's running continuously. This is <mark>time-sharing</mark>. The scheduler decides which process runs next, for how long, and on which core.</p>
+
+  <p><strong style="color:var(--amber)">Virtual Memory:</strong> Every process believes it has the entire address space to itself — say, a 48-bit space of 256 terabytes. In reality, only the pages currently in use are backed by actual RAM. The <mark>Memory Management Unit (MMU)</mark> — hardware in the CPU — translates virtual addresses to physical RAM addresses using page tables. This gives every process isolation and lets the OS swap cold pages to disk.</p>
+
+  <p><strong style="color:var(--amber)">System Calls:</strong> User programs cannot directly access hardware. They must ask the OS via system calls. <code>read()</code>, <code>write()</code>, <code>open()</code>, <code>fork()</code>, <code>exec()</code>, <code>mmap()</code> — these are the ~300 doorways between user programs and the kernel. A system call switches the CPU from <mark>user mode</mark> to <mark>kernel mode</mark> (a hardware privilege level), the kernel performs the action, and switches back.</p>
+
+  <p><strong style="color:var(--amber)">Interrupts:</strong> When you press a key, the keyboard sends an electrical interrupt signal to the CPU. The CPU stops whatever it's doing, saves its state, and jumps to the OS's interrupt handler, which reads the keypress and returns. This is how all I/O works — the CPU doesn't poll devices; devices signal the CPU when they have data.</p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 10: SOFTWARE STACK -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s10">
+  <div class="section-num">10 / 12</div>
+  <h2>From <span>Code</span> to Execution</h2>
+  <p class="lead">How do your words become electricity?</p>
+
+  <p>When you write <code>x = 5 + 3</code> in Python, that text goes through an extraordinary journey before transistors actually switch.</p>
+
+  <div class="diagram">
+  <pre>
+  Your Python code:       x = 5 + 3
+  │
+  ▼
+  Python Interpreter      Reads text, parses it into an Abstract Syntax Tree
+  (or Compiler)           "LOAD_CONST 5 → LOAD_CONST 3 → BINARY_ADD → STORE x"
+  │
+  ▼
+  Bytecode / IR           Platform-independent intermediate representation
+  │
+  ▼
+  Machine Code            x86-64 / ARM instructions (ADD RAX, 5 / ADD RAX, 3)
+  │               Binary opcodes: 01001000 10000011 11000000 00000011
+  ▼
+  CPU Microcode           Translates complex instructions to micro-ops
+  │               (Modern CPUs translate x86 instructions into
+  ▼                simpler internal RISC-like micro-operations)
+  Logic Gates             AND, OR, XOR, adders perform the actual addition
+  │
+  ▼
+  Transistors             Voltage levels switch, current flows
+  │
+  ▼
+  Electrons               Physics. Electromagnetism. Reality.
+  </pre>
+  </div>
+
+  <p>Compiled languages (C, Rust, Go) skip the interpreter and translate directly to machine code at build time — faster because there's no runtime translation overhead. Interpreted languages (Python, JavaScript) translate during execution. JIT (Just-In-Time) compilers (used in modern JavaScript engines and the JVM) detect hot paths and compile them to native code at runtime — a hybrid approach.</p>
+
+  <div class="callout red">
+  <div class="callout-label">The Instruction Set Architecture (ISA)</div>
+  <p>The ISA is the contract between hardware and software — the set of instructions the CPU understands. <mark>x86-64</mark> is used in most laptops and desktops. <mark>ARM</mark> is used in smartphones, Apple Silicon Macs, and most embedded devices. A program compiled for x86 cannot run natively on ARM (hence Rosetta 2, Apple's translation layer). The ISA is the language the CPU speaks.</p>
+  </div>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 11: NETWORKING -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s11">
+  <div class="section-num">11 / 12</div>
+  <h2>Networking — <span>Computers Talking</span></h2>
+  <p class="lead">The internet is a system for moving packets of bits between machines.</p>
+
+  <p>All networking reduces to the same thing: packing data into <mark>packets</mark> (chunks of bits with a header indicating source, destination, and how to reassemble them), routing those packets through a network of routers, and reassembling them at the destination.</p>
+
+  <h3>What happens when you type a URL and press Enter</h3>
+  <div class="net-flow">
+  <span>1.</span> Browser parses URL → needs IP address for "google.com"<br>
+  <span class="arrow">   ↓</span><br>
+  <span>2.</span> <span style="color:var(--amber)">DNS lookup</span> → sends UDP packet to DNS server → returns 142.250.x.x<br>
+  <span class="arrow">   ↓</span><br>
+  <span>3.</span> <span style="color:var(--amber)">TCP handshake</span> → SYN → SYN-ACK → ACK (3 packets to establish connection)<br>
+  <span class="arrow">   ↓</span><br>
+  <span>4.</span> <span style="color:var(--amber)">TLS handshake</span> → exchange cryptographic keys, verify certificate (HTTPS)<br>
+  <span class="arrow">   ↓</span><br>
+  <span>5.</span> <span style="color:var(--amber)">HTTP GET request</span> → "GET / HTTP/2" sent as TCP packets<br>
+  <span class="arrow">   ↓</span><br>
+  <span>6.</span> Packets travel through <span style="color:var(--amber)">routers</span> (each router reads destination IP, consults routing table, forwards)<br>
+  <span class="arrow">   ↓</span><br>
+  <span>7.</span> Server processes request, sends back HTML in TCP packets<br>
+  <span class="arrow">   ↓</span><br>
+  <span>8.</span> Your OS TCP stack <span style="color:var(--amber)">reassembles packets</span> in order, acknowledges receipt<br>
+  <span class="arrow">   ↓</span><br>
+  <span>9.</span> Browser parses HTML → requests CSS/JS/images (more TCP connections)<br>
+  <span class="arrow">   ↓</span><br>
+  <span>10.</span> Browser <span style="color:var(--amber)">renders</span> (builds DOM tree → layout → paint → GPU composites pixels on screen)
+  </div>
+
+  <p>All of this — typically in under 200 milliseconds. The entire internet is built on layered protocols: physical (electricity/light), data link (Ethernet/WiFi), network (IP), transport (TCP/UDP), and application (HTTP/DNS/SMTP). Each layer knows only about the layer above and below it.</p>
+  </section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- SECTION 12: THE FULL PICTURE -->
+<!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="s12">
+  <div class="section-num">12 / 12</div>
+  <h2>The <span>Full Picture</span></h2>
+  <p class="lead">From electrons to civilization. The chain is unbroken.</p>
+
+  <div class="diagram">
+  <pre style="color:var(--amber)">
+  PHYSICS
+  Electrons, electromagnetism, quantum mechanics
+  │
+  ▼
+  MATERIALS SCIENCE
+  Silicon doped with phosphorus/boron → semiconductor
+  │
+  ▼
+  TRANSISTORS
+  3nm voltage-controlled switches, 100 billion per chip
+  │
+  ▼
+  LOGIC GATES
+  NAND/NOR/XOR from transistor configurations
+  │
+  ▼
+  ARITHMETIC UNITS
+  Adders, multipliers, comparators from gates
+  │
+  ▼
+  CPU / GPU / NPU
+  Registers, ALU, Control Unit, Pipeline, Cache
+  │
+  ▼
+  MACHINE CODE
+  Binary instructions the CPU understands
+  │
+  ▼
+  OPERATING SYSTEM
+  Process scheduling, memory management, I/O abstraction
+  │
+  ▼
+  RUNTIME / VM / INTERPRETER
+  JVM, Python interpreter, Node.js
+  │
+  ▼
+  PROGRAMMING LANGUAGES
+  C, Python, JavaScript, Rust
+  │
+  ▼
+  FRAMEWORKS & LIBRARIES
+  React, TensorFlow, NumPy, Linux kernel
+  │
+  ▼
+  APPLICATIONS
+  Browsers, games, AI models, databases
+  │
+  ▼
+  NETWORKS & PROTOCOLS
+  TCP/IP, HTTP, DNS, TLS
+  │
+  ▼
+  CIVILIZATION
+  Communication, science, art, commerce, memory
+  </pre>
+  </div>
+
+  <p>Every email, every photo, every video call, every medical scan, every satellite navigation fix — all of it is ultimately electrons moving through silicon in patterns governed by Boolean logic discovered in the 1840s and implemented in physics discovered in the 1920s. The entire stack is made of ideas that can be understood.</p>
+
+  <div class="callout cyan">
+  <div class="callout-label">The Most Important Insight</div>
+  <p>A computer has no understanding of what it is doing. It executes instructions. Billions of them. Very fast. The intelligence — the meaning — is injected entirely by the programmer who arranged those instructions, and by the humans who interpret the output. <mark>A computer is a very fast, very obedient, completely literal instruction-follower with no judgment whatsoever.</mark> Everything that seems intelligent about computers is a structure humans built on top of this blank substrate.</p>
+  </div>
+
+  <p>The obscure is now obvious. You are not looking at magic. You are looking at the most elaborate engineering project in human history — built from almost nothing, one layer of abstraction at a time, by thousands of people across decades. And it all starts with a tiny switch made of sand.</p>
+  </section>
+
+  <footer>
+  <div>
+    Built from sand → silicon → transistors → gates → CPU → OS → software → you</div>
+    <div style="margin-top:0.5rem">Every layer reveals another layer. There is no bottom.
+      <br>
+      <span class="blink">█</span>
+    </div>
+  </footer>
+</body>
+</html>
